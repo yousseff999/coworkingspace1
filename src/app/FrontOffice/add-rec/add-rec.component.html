@@ -1,0 +1,65 @@
+<header id="menu-jk">
+    <div id="nav-head" class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                    <img class="lo" src="assets/images/logo.png" alt="">
+                    <img class="lob hid" src="assets/images/logo-black.png" alt="">
+                    <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                </div>
+                <div id="menu" class="col-lg-9 col-md-9 d-none d-md-block nav-item">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#facility">Facilitys</a></li>
+                        <li><a href="#about_us">About Us</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="slider">
+    <div class="owl-carousel">
+        <div class="item">
+            <div class="slider-img">
+                <img src="assets/images/slider/slider-2.jpg" alt="">
+            </div>
+            <div class="container form-container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-12">
+                        <div class="form-overlay">
+                            <h1 class="slider-title">It's time for feedback.</h1>
+                            <p class="slider-text hidden-xs">We can help you conquer a wide range of psychological and emotional problems.</p>
+                            <div class="container mt-5">
+                                <form (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <input type="text" id="title" [(ngModel)]="reclamation.reclamationTitle" name="title" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea id="description" [(ngModel)]="reclamation.reclamationDescription" name="description" class="form-control" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="category">Category</label>
+                                        <input type="text" id="category" [(ngModel)]="reclamation.category" name="category" class="form-control" required>
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input type="file" id="image" (change)="onFileChange($event)" class="form-control">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Add Reclamation</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.slider .slider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.form-overlay {
+    background-color: rgba(93, 90, 90, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.slider-title {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: rgb(0, 0, 0); /* Set text color to black */
+}
+
+.slider-text {
+    margin-bottom: 20px;
+    color: black; /* Set text color to black */
+}
