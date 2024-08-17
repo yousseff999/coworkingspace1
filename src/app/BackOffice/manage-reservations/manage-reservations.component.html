@@ -1,0 +1,25 @@
+<h2>Manage Reservations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Room ID</th>
+      <th>User ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{ reservation.idReservation }}</td>
+      <td>{{ reservation.dateDebut }}</td>
+      <td>{{ reservation.dateFin }}</td>
+      <td>{{ reservation.salle.idSalle }}</td>
+      <td>{{ reservation.user.idUser }}</td>
+      <td>
+        <button (click)="deleteReservation(reservation.idReservation!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
