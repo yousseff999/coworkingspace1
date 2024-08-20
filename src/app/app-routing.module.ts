@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'pageAcceuil', component:PageAcceuilComponent  , children:[
     { path: 'make-reservation', component: ReservationFormComponent },
     { path: 'manage-reservations', component: ManageReservationsComponent },
-    { path: '', redirectTo: '/make-reservation', pathMatch: 'full' } 
+    
   ]},
   { path:'login',component:LoginComponent},
    { path:'signup',component:SignupComponent},

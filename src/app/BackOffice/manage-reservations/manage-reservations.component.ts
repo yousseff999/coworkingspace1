@@ -16,16 +16,25 @@ export class ManageReservationsComponent implements OnInit {
     this.getReservations();
   }
 
-  getReservations(): void {
-    this.reservationService.getReservations().subscribe(
-      (data: Reservation[]) => {
-        this.reservations = data;
-      },
-      (error: any) => {
-        console.error('Error fetching reservations', error);
-      }
-    );
-  }
+
+getReservations(): void {
+  this.reservationService.getReservations().subscribe(
+    (data: Reservation[]) => {
+      // Create separate Date objects
+      data.forEach(reservation => {
+        reservation.dateDebutObj = new Date(reservation.dateDebut);
+        reservation.dateFinObj = new Date(reservation.dateFin);
+      });
+
+      this.reservations = data;
+    },
+    (error: any) => {
+      console.error('Error fetching reservations', error);
+    }
+  );
+}
+  
+  
 
   deleteReservation(id: number): void {
     if (id === undefined) {

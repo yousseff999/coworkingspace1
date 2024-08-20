@@ -46,7 +46,7 @@ export class UserService {
       localStorage.setItem('authToken', response.token);
 
       // Redirect to the homepage
-      this.router.navigate(['/pageAcceuil']);
+      this.router.navigate(['/']);
     }, error => {
       // Handle error, e.g., display error message
       console.error('Login failed', error);
