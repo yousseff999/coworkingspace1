@@ -36,4 +36,15 @@ export class reclamationService {
     return this.http.delete<void>(`${this.baseURL}/deleteRec/${id}`);
   }
 
+  getImageUrl(id: number): Observable<string> {
+    return this.http.get(`${this.baseURL}/getImageUrl/${id}`, { responseType: 'text' });
+  }
+  getReclamation(id: number): Observable<Reclamation> {
+    return this.http.get<Reclamation>(`${this.baseURL}/GetRec/${id}`);
+  }
+
+  respondToReclamation(id: number, response: string): Observable<void> {
+    const url = `${this.baseURL}/reclamation/respond/${id}`;
+    return this.http.post<void>(url, { response });
+  }
 }

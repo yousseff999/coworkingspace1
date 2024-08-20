@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AdminPageComponent } from './BackOffice/admin-page/admin-page.component';
 import { RecListComponent } from './BackOffice/rec-list/rec-list.component';
+import { ResponseComponent } from './BackOffice/response/response.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     AddRecComponent,
     AdminPageComponent,
-    RecListComponent
+    RecListComponent,
+    ResponseComponent
   ],
   imports: [
     BrowserModule,

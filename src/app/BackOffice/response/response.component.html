@@ -134,28 +134,27 @@
         <div class="container-fluid">
           
           <!-- Reclamations Section -->
-<div *ngIf="reclamations.length > 0; else noRecs">
-  <div class="row">
-    <div class="col-md-4" *ngFor="let rec of reclamations">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">{{ rec.reclamationTitle }}</h5>
-          <p class="card-text">{{ rec.reclamationDescription }}</p>
-          <img *ngIf="rec.recImage" [src]="rec.recImage" alt="Reclamation Image">
-          <div class="button-container">
-            <button (click)="respondToReclamation(rec.reclamationID!)" class="btn-custom btn-respond">Respond</button>
-                        <button (click)="deleteReclamation(rec.reclamationID!)" class="btn-custom btn-delete">Delete</button>
+ <!-- No Reclamations Template -->
+ <ng-template #noRecs>
+    <p>No reclamations available.</p>
+  </ng-template>
 
-          </div>          
-          <p class="card-text">
-            <small class="text-muted">Date: {{ rec.reclamationDate | date:'mediumDate' }}</small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Answering Message Section -->
+  <div class="answer-message-section mt-4">
+    <h5 style="color: black;">Respond to Reclamation</h5>
+    <div class="form-group">
+      <label for="responseText">Your Response:</label>
+      <textarea
+      id="responseText"
+      class="form-control"
+      rows="5"
+      placeholder="Write your message here..."
+      style="background-color: lightgray; color: black;"
+    ></textarea>
+    <button (click)="sendResponse()" class="send-button">Send</button>
 </div>
-
+  </div>
+  <!-- End Answering Message Section -->
 <!-- No Reclamations Template -->
 <ng-template #noRecs>
   <p>No reclamations available.</p>
