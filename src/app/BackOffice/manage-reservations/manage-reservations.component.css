@@ -1,0 +1,59 @@
+/* Style the table container */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Style the table header */
+table thead tr {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text for contrast */
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Style the table rows */
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  color: #000; /* Ensure text color is black for readability */
+}
+
+/* Alternate row coloring for better readability */
+table tbody tr:nth-child(even) {
+  background-color: #f3f3f3; /* Light gray for even rows */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows to keep contrast */
+}
+
+/* Style the delete button */
+button {
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table {
+      font-size: 16px;
+  }
+
+  button {
+      padding: 6px 10px;
+      font-size: 14px;
+  }
+}

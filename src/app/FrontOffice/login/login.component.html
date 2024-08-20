@@ -1,0 +1,14 @@
+
+
+<div style="background-color: darkgrey;">
+    <div class="login">
+      <h1>Login</h1>
+      <form (ngSubmit)="onLogin()">
+        <input type="text" [(ngModel)]="email" name="u" placeholder="Email" required="required" />
+        <input type="password" [(ngModel)]="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Log in</button>
+        <button routerLink="/signup" class="btn btn-primary btn-block btn-large">sign up </button>
+      </form>
+    </div>
+  </div>
+
